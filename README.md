@@ -1,7 +1,7 @@
 <!--README.md-->
 <!--Simon Hulse-->
 <!--simonhulse@protonmail.com-->
-<!--Last Edited: Wed 25 Sep 2024 07:03:18 PM EDT-->
+<!--Last Edited: Wed 25 Sep 2024 07:08:27 PM EDT-->
 
 # FrappyBird
 
@@ -24,4 +24,6 @@ For an example, clone this repository:
 
     git clone https://github.com/5hulse/FrappyBird.git
 
-Navigate to the `FrappyBird/` and run the script as described above.
+Alternatively, click the big green `<> Code` button, then click `Download ZIP`,
+and unzip the downloaded archive. Then do as described in the **Usage** section
+above.
