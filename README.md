@@ -1,13 +1,16 @@
 <!--README.md-->
 <!--Simon Hulse-->
 <!--simonhulse@protonmail.com-->
-<!--Last Edited: Wed 25 Sep 2024 07:08:27 PM EDT-->
+<!--Last Edited: Wed 25 Sep 2024 07:12:00 PM EDT-->
 
 # FrappyBird
 
 Script for processing FRAP data.
 
 ## Usage
+
+Download `FrappyBird.m` by clicking on it, and then selecting the `Download
+raw file` icon on the right-hand side (2 icons to the right of the `Raw` icon).
 
 To use, copy `FrappyBird.m` into a directory containing relevant `.csv` files.
 
