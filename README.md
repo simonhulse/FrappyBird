@@ -1,7 +1,7 @@
 <!--README.md-->
 <!--Simon Hulse-->
 <!--simonhulse@protonmail.com-->
-<!--Last Edited: Wed 25 Sep 2024 07:12:00 PM EDT-->
+<!--Last Edited: Thu 26 Sep 2024 10:16:15 AM EDT-->
 
 # FrappyBird
 
@@ -9,24 +9,10 @@ Script for processing FRAP data.
 
 ## Usage
 
-Download `FrappyBird.m` by clicking on it, and then selecting the `Download
-raw file` icon on the right-hand side (2 icons to the right of the `Raw` icon).
-
-To use, copy `FrappyBird.m` into a directory containing relevant `.csv` files.
-
 Load `MATLAB`, and enter the following commands at the prompt:
 
-    >> cd PATH/TO/DIRECTORY/CONTAINING/THE/DATA
+    >> cd DIRECTORY/CONTAINING/THE/CSV/FILES/
+    >> !wget -O FrappyBird.m https://raw.githubusercontent.com/5hulse/FrappyBird/refs/heads/main/FrappyBird.m
     >> FrappyBird
 
 The result of the processing is stored in the newly-formed `output` directory.
-
-## An example
-
-For an example, clone this repository:
-
-    git clone https://github.com/5hulse/FrappyBird.git
-
-Alternatively, click the big green `<> Code` button, then click `Download ZIP`,
-and unzip the downloaded archive. Then do as described in the **Usage** section
-above.
