@@ -1,7 +1,7 @@
 % FrappyBird.m
 % Simon Hulse
 % simonhulse@protonmail.com
-% Last Edited: Wed 25 Sep 2024 06:53:04 PM EDT
+% Last Edited: Fri 27 Sep 2024 01:41:03 PM EDT
 
 function FrappyBird
     disp(' ____  ____    __    ____  ____  _  _    ____  ____  ____  ____  ');
@@ -25,7 +25,7 @@ function FrappyBird
     for fileinfo = listing'
         csvfile = fileinfo.name;
 
-        tokens = regexp(csvfile, '(.*) ([A-Z]) - \d_\.csv', 'tokens');
+        tokens = regexp(csvfile, '(.*) ([A-Z]).*\.csv', 'tokens');
         conditions = tokens{1}{1};
         letter = tokens{1}{2};
 
