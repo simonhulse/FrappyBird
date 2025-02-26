@@ -1,7 +1,7 @@
 <!--README.md-->
 <!--Simon Hulse-->
 <!--simonhulse@protonmail.com-->
-<!--Last Edited: Thu 26 Sep 2024 10:16:15 AM EDT-->
+<!--Last Edited: Wed 26 Feb 2025 05:03:12 PM EST-->
 
 # FrappyBird
 
@@ -32,7 +32,7 @@ This means it should consist of:
 Load `MATLAB`, and enter the following commands at the prompt:
 
     >> cd DIRECTORY/CONTAINING/THE/CSV/FILES/
-    >> !wget -O FrappyBird.m https://raw.githubusercontent.com/5hulse/FrappyBird/refs/heads/main/FrappyBird.m
+    >> !curl -o FrappyBird.m https://raw.githubusercontent.com/simonhulse/FrappyBird/refs/heads/main/FrappyBird.m
     >> FrappyBird
 
 The result of the processing is stored in the newly-formed `output` directory.
