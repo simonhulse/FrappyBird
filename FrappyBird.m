@@ -1,7 +1,7 @@
 % FrappyBird.m
 % Simon Hulse
 % simonhulse@protonmail.com
-% Last Edited: Fri 27 Sep 2024 01:41:03 PM EDT
+% Last Edited: Wed 26 Feb 2025 05:59:11 PM EST
 
 function FrappyBird
     disp(' ____  ____    __    ____  ____  _  _    ____  ____  ____  ____  ');
@@ -77,15 +77,24 @@ function FrappyBird
         time_slice = time(11:end);
         frap_slice = frap(11:end);
         [fit_result, ~] = tau_fit(time_slice, frap_slice);
-        I = fit_result.I; a = fit_result.a; b = fit_result.b; g = fit_result.g;
 
+        I = fit_result.I; a = fit_result.a; b = fit_result.b; g = fit_result.g;
         mf = (a + g) / (1.0 - (I - a - g));
         t_half = log(2.0) / b;
 
-        text = sprintf('mf: %6f\nt_half: %6f', mf, t_half);
+        % Determine errors
+        values = coeffvalues(fit_result);
+        confints = confint(fit_result, 0.6827);
+        stdevs = num2cell(values - confints(1, :));
+        [I_err, a_err, b_err, d_err, g_err] = stdevs{:};
+        mf_error = 0  %% TODO: compute
+        t_half_error = (log(2) / b^2) * b_err
+
+        text = sprintf('mf: %6f ± %6f\nt_half: %6f ± %6f', mf, mf_error, t_half, t_half_error);
         fileID = fopen(stats_path, 'w');
         fprintf(fileID, text);
         fclose(fileID);
+        fprintf('%s\n', text);
         fprintf('--> Saved `mf` and `nt_half` to %s\n', stats_path);
 
         % Plot normalized data
